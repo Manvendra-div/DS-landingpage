@@ -57,7 +57,8 @@ export default function DistributedStorage() {
         trigger: ".scrollBox1",
         start: "top 10%",
         end: "top 0%",
-        scrub: true
+        scrub: 1.5,
+        pin: true
       }
     });
     tl.from(
