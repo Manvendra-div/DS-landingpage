@@ -13,7 +13,6 @@ export default function UseSteps() {
         start: "top 40%",
         end: "top -10%",
         scrub: 2,
-        markers: true,
       },
     });
     tl.to(
@@ -25,11 +24,15 @@ export default function UseSteps() {
       },
       "elongate"
     );
-    tl.to(".scrollArea",{
-      height: "1700px",
-      duration: 1,
-      ease: "power1.out",
-    },"elongate")
+    tl.to(
+      ".scrollArea",
+      {
+        height: "1700px",
+        duration: 1,
+        ease: "power1.out",
+      },
+      "elongate"
+    );
     tl.from(
       ".uploadSection",
       {
@@ -164,7 +167,7 @@ export default function UseSteps() {
         <div className="h-[10vh] bg-foreground w-[8px] rounded-full line" />
         <div className="flex flex-col justify-between h-full py-20">
           <div className="flex items-center h-fit space-x-3 uploadSection">
-            <div className="rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[150px] h-[150px] flex justify-center items-center">
+            <div className="ml-3 lg:ml-0 rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] flex justify-center items-center">
               <Upload className="w-[50%] h-[50%]" />
             </div>
             <div className="flex flex-col space-y-2">
@@ -178,7 +181,7 @@ export default function UseSteps() {
             </div>
           </div>
           <div className="flex items-center h-fit space-x-3 lockSection">
-            <div className="rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[150px] h-[150px] flex justify-center items-center">
+            <div className="ml-3 lg:ml-0 rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] flex justify-center items-center">
               <Lock className="w-[50%] h-[50%]" />
             </div>
             <div className="flex flex-col space-y-2">
@@ -191,7 +194,7 @@ export default function UseSteps() {
             </div>
           </div>
           <div className="flex items-center h-fit space-x-3 splitSection">
-            <div className="rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[150px] h-[150px] flex justify-center items-center">
+            <div className="ml-3 lg:ml-0 rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] flex justify-center items-center">
               <Table className="w-[50%] h-[50%]" />
             </div>
             <div className="flex flex-col space-y-2">
@@ -204,7 +207,7 @@ export default function UseSteps() {
             </div>
           </div>
           <div className="flex items-center h-fit space-x-3 distributeSection">
-            <div className="rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[150px] h-[150px] flex justify-center items-center">
+            <div className="ml-3 lg:ml-0 rounded-full bg-gradient-to-r from-[#818cf8] to-transparent w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] flex justify-center items-center">
               <Globe2 className="w-[50%] h-[50%]" />
             </div>
             <div className="flex flex-col space-y-2">
