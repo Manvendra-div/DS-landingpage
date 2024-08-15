@@ -45,7 +45,7 @@ export default function DistributedStorage() {
         trigger: ".scrollBox1",
         start: "top 50%",
         end: "top -7%",
-        scrub: true,
+        scrub: 2,
       },
     });
     tl.from(".featHeading", {

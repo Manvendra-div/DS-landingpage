@@ -46,8 +46,8 @@ export default function DataPersistence() {
       scrollTrigger: {
         trigger: ".scrollBox3",
         start: "top 50%",
-        end: "top -7%",
-        scrub: true,
+        end: "top -4%",
+        scrub: 2
       },
     });
     tl.from(

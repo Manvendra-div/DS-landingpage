@@ -47,7 +47,7 @@ export default function CompletelyPrivate() {
         trigger: ".scrollBox2",
         start: "top 50%",
         end: "top -7%",
-        scrub: true,
+        scrub: 2,
       },
     });
     tl.from(
