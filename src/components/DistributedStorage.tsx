@@ -6,9 +6,8 @@ import { ArrowRight } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function DistributedStorage() {
-  const { theme } = useTheme();
   const linkRef = useRef<HTMLAnchorElement | null>(null);
-
+  const {theme} = useTheme()
   useEffect(() => {
     const link = linkRef.current;
 
@@ -53,13 +52,13 @@ export default function DistributedStorage() {
       top: `-50%`,
       duration: 1,
       ease: "power2.out",
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: ".scrollBox1",
         start: "top 10%",
         end: "top 0%",
         scrub: 1.5,
-        pin: true
-      }
+        pin: true,
+      },
     });
     tl.from(
       ".heading1",
@@ -97,7 +96,7 @@ export default function DistributedStorage() {
       <svg
         className="flex justify-center items-center w-[60%] lg:w-[20%] h-[50%] lg:h-full rotateSvg1"
         viewBox="0 0 38 38"
-        fill={theme === "dark" || theme === "system" ? "white" : "black"}
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -107,7 +106,7 @@ export default function DistributedStorage() {
         <path
           opacity="0.4"
           d="M31.0531 11.7191L28.2477 27.1344C27.3051 26.4961 26.1621 26.125 24.9375 26.125C24.4699 26.125 24.0098 26.1769 23.5719 26.2808L26.3774 10.8656C27.3199 11.5039 28.4629 11.875 29.6875 11.875C30.1551 11.875 30.6153 11.823 31.0531 11.7191ZM11.6004 17.2336L22.4067 26.689C20.9223 27.3867 19.7793 28.6855 19.2746 30.2664L8.46838 20.8109C9.95276 20.0465 11.0957 18.8144 11.6004 17.2336ZM11.875 15.4375C11.875 13.7824 11.1996 12.2906 10.1086 11.2144L23.75 5.75342C23.75 5.81502 23.75 5.87588 23.75 5.93748C23.75 7.59256 24.4254 9.08436 25.5164 10.1605L11.8082 15.623C11.8082 15.5637 11.875 15.4969 11.875 15.4375Z"
-          fill={theme === "dark" || theme === "system" ? "white" : "black"}
+          fill="rgb(129 140 248)"
         />
       </svg>
       <div className="w-full lg:w-[65%] flex flex-col justify-between h-[50%] lg:h-full items-center lg:items-start lg:text-start text-lg font-bold space-y-5">

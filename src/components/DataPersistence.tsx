@@ -1,14 +1,13 @@
 import { useEffect, useRef } from "react";
-import { useTheme } from "./theme-provider";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTheme } from "./theme-provider";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function DataPersistence() {
-  const { theme } = useTheme();
   const linkRef = useRef<HTMLAnchorElement | null>(null);
-
+  const {theme} = useTheme()
   useEffect(() => {
     const link = linkRef.current;
 
@@ -80,13 +79,17 @@ export default function DataPersistence() {
       duration: 0.5,
       ease: "circ.out",
     });
+    tl.to(".featHeading", {
+      opacity: 0,
+      pin:false
+    })
   });
   return (
     <div className="flex flex-col lg:flex-row justify-between items-center h-[40vh] lg:h-[30vh] w-full space-y-10 lg:space-y-0">
       <svg
        className="flex justify-center items-center w-[60%] lg:w-[20%] h-[50%] lg:h-full rotateSvg3"
         viewBox="0 0 38 44"
-        fill={theme === "dark" || theme === "system" ? "white" : "black"}
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -96,7 +99,7 @@ export default function DataPersistence() {
         <path
           opacity="0.4"
           d="M0 8.25C0 5.21211 2.43013 2.75 5.42857 2.75H32.5714C35.5656 2.75 38 5.21211 38 8.25V35.75C38 38.7836 35.5656 41.25 32.5714 41.25H5.42857C2.43013 41.25 0 38.7836 0 35.75V8.25ZM6.10714 6.875C4.98326 6.875 4.07143 7.79883 4.07143 8.9375C4.07143 10.0805 4.98326 11 6.10714 11C7.23103 11 8.14286 10.0805 8.14286 8.9375C8.14286 7.79883 7.23103 6.875 6.10714 6.875ZM31.8929 11C33.021 11 33.9286 10.0805 33.9286 8.9375C33.9286 7.79883 33.021 6.875 31.8929 6.875C30.7647 6.875 29.8571 7.79883 29.8571 8.9375C29.8571 10.0805 30.7647 11 31.8929 11ZM6.10714 33C4.98326 33 4.07143 33.9195 4.07143 35.0625C4.07143 36.2055 4.98326 37.125 6.10714 37.125C7.23103 37.125 8.14286 36.2055 8.14286 35.0625C8.14286 33.9195 7.23103 33 6.10714 33ZM31.8929 37.125C33.021 37.125 33.9286 36.2055 33.9286 35.0625C33.9286 33.9195 33.021 33 31.8929 33C30.7647 33 29.8571 33.9195 29.8571 35.0625C29.8571 36.2055 30.7647 37.125 31.8929 37.125Z"
-          fill={theme === "dark" || theme === "system" ? "white" : "black"}
+          fill="rgb(129 140 248)"
         />
       </svg>
 

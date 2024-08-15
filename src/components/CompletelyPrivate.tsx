@@ -6,9 +6,8 @@ import { ArrowRight } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function CompletelyPrivate() {
-  const { theme } = useTheme();
   const linkRef = useRef<HTMLAnchorElement | null>(null);
-
+const {theme} = useTheme()
   useEffect(() => {
     const link = linkRef.current;
 
@@ -104,7 +103,7 @@ export default function CompletelyPrivate() {
       <svg
         className="flex justify-center items-center w-[60%] lg:w-[20%] h-[50%] lg:h-full rotateSvg2"
         viewBox="0 0 38 38"
-        fill={theme === "dark" || theme === "system" ? "white" : "black"}
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -114,7 +113,7 @@ export default function CompletelyPrivate() {
         <path
           opacity="0.4"
           d="M34.623 6.21137L20.373 0.273125C20.0094 0.122906 19.3934 0 19.0074 0C18.6141 0 17.998 0.122906 17.6344 0.273719L3.38437 6.21196C2.05512 6.75984 1.1875 8.06016 1.1875 9.4332C1.1875 28.5891 15.2297 38 18.9332 38C22.7926 38 36.8125 28.4852 36.8125 9.4332C36.8125 8.06016 35.9441 6.75984 34.623 6.21137ZM20.7812 19.1781V24.3438C20.7812 25.3271 19.9834 26.125 19 26.125C18.0166 26.125 17.2188 25.3271 17.2188 24.3438V19.1781C15.816 18.5102 14.8438 17.0926 14.8438 15.4375C14.8438 13.1419 16.7044 11.2812 19 11.2812C21.2956 11.2812 23.1562 13.1419 23.1562 15.4375C23.1562 17.0926 22.184 18.5102 20.7812 19.1781Z"
-          fill={theme === "dark" || theme === "system" ? "white" : "black"}
+          fill="rgb(129 140 248)"
         />
       </svg>
     </div>

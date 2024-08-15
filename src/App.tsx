@@ -7,6 +7,7 @@ import { ReactLenis } from 'lenis/react'
 import { ThemeProvider } from "./components/theme-provider";
 import Features from "./components/Features";
 import gsap from "gsap";
+import UseSteps from "./components/UseSteps";
 function App() {
   const lenisRef = useRef<any>()
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
         <NavBar />
         <Hero/>
        <Features/>
+       <UseSteps/>
       </div>
     </ThemeProvider>
     </ReactLenis>

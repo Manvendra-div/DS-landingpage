@@ -67,7 +67,7 @@ export default function Hero() {
   return (
     <Container
       pclassName="relative min-h-screen overflow-hidden"
-      className="flex flex-col justify-center items-center  text-center space-y-4"
+      className="flex flex-col justify-center items-center text-center space-y-4"
     >
       <Badge
         variant={"secondary"}
