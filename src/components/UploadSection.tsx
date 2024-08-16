@@ -14,38 +14,48 @@ export default function UploadSection() {
         scrub: 2,
       },
     });
-    tl.fromTo(".flowHeading", {
-      opacity: 0,
-      top: `50%`,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".uploadSection",
-        start: "top 10%",
-        end: "top 0%",
-        scrub: 1.5
+    tl.fromTo(
+      ".flowHeading",
+      {
+        opacity: 0,
+        top: `50%`,
+        duration: 1,
+        ease: "power2.out",
+      },
+      {
+        opacity: 1,
+        top: `85%`,
       }
-    },{
-      opacity: 1,
-      top: `85%`,
-    });
-    tl.from(".uploadIcon", {
-      opacity: 0,
-      rotate: 270,
-      duration: 1,
-      ease: "expo",
-    },"first");
-    tl.from(".uploadHeading", {
-      y: 300,
-      opacity: 0,
-      ease: "expo",
-    },"first");
-    tl.from(".uploadDesc", {
-      x: 300,
-      opacity: 0,
-      duration: 1,
-      ease: "expo",
-    },"first")
+    );
+    tl.from(
+      ".uploadIcon",
+      {
+        opacity: 0,
+        rotate: 270,
+        duration: 1,
+        ease: "expo",
+      },
+      "first"
+    );
+    tl.from(
+      ".uploadHeading",
+      {
+        y: 300,
+        opacity: 0,
+        ease: "expo",
+      },
+      "first"
+    );
+    tl.from(
+      ".uploadDesc",
+      {
+        x: 300,
+        opacity: 0,
+        duration: 1,
+        ease: "expo",
+      },
+      "first"
+    );
   });
   return (
     <div className="w-full ml-10 flex flex-col lg:flex-row justify-center lg:justify-normal lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 uploadSection h-screen">
