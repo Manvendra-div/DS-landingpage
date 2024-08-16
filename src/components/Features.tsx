@@ -18,7 +18,7 @@ const Features: React.FC = () => {
       <div className="flex justify-center items-center h-[100vh] scrollBox3">
         <DataPersistence />
       </div>
-      <span className="fixed text-2xl lg:text-6xl font-extrabold featHeading kanit-regular">
+      <span className="fixed text-2xl lg:text-6xl font-extrabold featHeading kanit-regular z-10">
         Why Decentralized Storage?
       </span>
     </Container>

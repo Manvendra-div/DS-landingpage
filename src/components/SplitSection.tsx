@@ -33,8 +33,8 @@ export default function SplitSection() {
     },"first")
   })
   return (
-    <div className="w-full ml-10 flex flex-col lg:flex-row justify-center lg:justify-normal lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 splitSection h-screen">
-      <Table className="w-[80px] h-[80px] text-indigo-400 splitIcon"/>
+    <div className="w-full flex flex-col justify-center lg:items-center lg:space-x-3 space-y-1 splitSection h-screen">
+      <Table className="w-[80px] h-[80px] lg:h-[200px] lg:w-[200px] text-indigo-400 splitIcon"/>
       <span className="text-3xl kanit-regular font-bold splitHeading">Split</span>
       <span className="hidden lg:block">-</span>
       <span className="splitDesc">

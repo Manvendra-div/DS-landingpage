@@ -58,8 +58,8 @@ export default function UploadSection() {
     );
   });
   return (
-    <div className="w-full ml-10 flex flex-col lg:flex-row justify-center lg:justify-normal lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 uploadSection h-screen">
-      <UploadCloud className="w-[80px] h-[80px] text-indigo-400 uploadIcon" />
+    <div className="w-full flex flex-col justify-center lg:items-center lg:space-x-3 space-y-1 uploadSection h-screen">
+      <UploadCloud className="w-[80px] h-[80px] lg:h-[200px] lg:w-[200px] text-indigo-400 uploadIcon" />
       <span className="text-3xl kanit-regular font-bold uploadHeading">
         Upload
       </span>

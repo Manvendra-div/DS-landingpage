@@ -3,20 +3,16 @@ import UploadSection from "./UploadSection";
 import EncryptSection from "./EncryptSecton";
 import SplitSection from "./SplitSection";
 import DistributeSection from "./DistributeSection";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function UseSteps() {
   return (
     <Container
       pclassName="relative min-h-screen overflow-hidden"
       className="flex justify-center items-center"
     >
-       <span className="fixed bottom-10 text-2xl lg:text-6xl font-extrabold flowHeading kanit-regular">
-       Features
+      <span className="fixed bottom-10 text-2xl lg:text-6xl font-extrabold flowHeading kanit-regular z-10">
+        Features
       </span>
-      <div className="flex flex-col scrollArea">
+      <div className="flex flex-col scrollArea w-full">
         <UploadSection />
         <EncryptSection />
         <SplitSection />
