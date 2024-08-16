@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./App.css";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
-import { ReactLenis, useLenis } from "lenis/react";
+import { ReactLenis } from "lenis/react";
 
 import { ThemeProvider } from "./components/theme-provider";
 import Features from "./components/Features";
