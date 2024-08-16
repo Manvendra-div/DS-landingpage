@@ -65,7 +65,7 @@ export default function NavBar() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-transparent">
-              Item One
+              Features
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="md:w-[400px] lg:w-[500px] p-6"></div>
@@ -73,7 +73,7 @@ export default function NavBar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-transparent">
-              Item Two
+              Solutions
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="md:w-[400px] lg:w-[500px] p-6"></div>
@@ -81,7 +81,7 @@ export default function NavBar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-transparent">
-              Item Three
+              Resources
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="md:w-[400px] lg:w-[500px] p-6"></div>
