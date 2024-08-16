@@ -28,6 +28,7 @@ function App() {
           <Hero />
           <Features />
           <UseSteps />
+          <div className="h-[100vh]"></div>
         </div>
       </ThemeProvider>
     </ReactLenis>

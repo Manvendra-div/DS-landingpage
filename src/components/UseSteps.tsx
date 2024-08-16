@@ -13,6 +13,9 @@ export default function UseSteps() {
       pclassName="relative min-h-screen overflow-hidden"
       className="flex justify-center items-center"
     >
+       <span className="fixed bottom-10 text-2xl lg:text-6xl font-extrabold flowHeading kanit-regular">
+       Features
+      </span>
       <div className="flex flex-col scrollArea">
         <UploadSection />
         <EncryptSection />

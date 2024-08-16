@@ -9,12 +9,28 @@ export default function UploadSection() {
       delay: 1,
       scrollTrigger: {
         trigger: ".uploadSection",
-        start: "top 40%",
+        start: "top 60%",
         end: "bottom 90%",
         scrub: 2,
       },
     });
+    tl.fromTo(".flowHeading", {
+      opacity: 0,
+      top: `50%`,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".uploadSection",
+        start: "top 10%",
+        end: "top 0%",
+        scrub: 1.5
+      }
+    },{
+      opacity: 1,
+      top: `85%`,
+    });
     tl.from(".uploadIcon", {
+      opacity: 0,
       rotate: 270,
       duration: 1,
       ease: "expo",
@@ -32,7 +48,7 @@ export default function UploadSection() {
     },"first")
   });
   return (
-    <div className="w-full ml-10 flex flex-col lg:flex-row lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 uploadSection h-screen">
+    <div className="w-full ml-10 flex flex-col lg:flex-row justify-center lg:justify-normal lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 uploadSection h-screen">
       <UploadCloud className="w-[80px] h-[80px] text-indigo-400 uploadIcon" />
       <span className="text-3xl kanit-regular font-bold uploadHeading">
         Upload

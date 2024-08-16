@@ -9,12 +9,13 @@ export default function EncryptSection() {
       delay: 1,
       scrollTrigger: {
         trigger: ".encryptSection",
-        start: "top 40%",
+        start: "top 60%",
         end: "bottom 90%",
         scrub: 2,
       },
     });
     tl.from(".encryptIcon", {
+      opacity: 0,
       rotate: 270,
       duration: 1,
       ease: "expo",
@@ -32,7 +33,7 @@ export default function EncryptSection() {
     },"first")
   });
   return (
-    <div className="w-full ml-10 flex flex-col lg:flex-row lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 encryptSection h-screen">
+    <div className="w-full ml-10 flex flex-col lg:flex-row justify-center lg:justify-normal lg:items-center lg:space-x-3 space-y-1 lg:space-y-0 encryptSection h-screen">
       <FileLock className="w-[80px] h-[80px] text-indigo-400 encryptIcon"/>
       <span className="text-3xl kanit-regular font-bold encryptHeading">Encrypt</span>
       <span className="hidden lg:block">-</span>
