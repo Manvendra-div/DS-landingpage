@@ -18,8 +18,8 @@ const Features: React.FC = () => {
       <div className="flex justify-center items-center h-[100vh] scrollBox3">
         <DataPersistence />
       </div>
-      <span className="fixed top-10 left-10 text-2xl lg:text-6xl font-extrabold featHeading kanit-regular">
-        Why DS?
+      <span className="fixed text-2xl lg:text-6xl font-extrabold featHeading kanit-regular">
+        Why Decentralized Storage?
       </span>
     </Container>
   );

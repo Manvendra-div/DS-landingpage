@@ -81,7 +81,7 @@ const {theme} = useTheme()
     });
   });
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between items-center h-[70vh] lg:h-[30vh] w-full space-y-16 lg:space-y-0 scrollBox2">
+    <div className="flex flex-col-reverse lg:flex-row justify-between items-center h-[70vh] lg:h-[30vh] max-h-[200px] w-full space-y-16 lg:space-y-0 scrollBox2">
       <div className="w-full lg:w-[65%] flex flex-col justify-between h-[50%] lg:h-full items-center lg:items-start lg:text-start text-lg font-bold space-y-5">
         <span className="text-xl lg:text-3xl font-extrabold heading2">
         Completely Private

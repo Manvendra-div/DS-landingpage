@@ -9,7 +9,7 @@ export default function Container({
 }) {
   return (
     <div className={`${pclassName} w-full flex justify-center items-center`}>
-      <div className={` ${className} w-[90%] lg:w-[80%] max-w-[1440px]`}>
+      <div className={`${className} w-[90%] lg:w-[80%] max-w-[1440px]`}>
         {children}
       </div>
     </div>

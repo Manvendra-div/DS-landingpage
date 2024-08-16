@@ -81,11 +81,10 @@ export default function DataPersistence() {
     });
     tl.to(".featHeading", {
       opacity: 0,
-      pin:false
     })
   });
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center h-[40vh] lg:h-[30vh] w-full space-y-10 lg:space-y-0">
+    <div className="flex flex-col lg:flex-row justify-between items-center h-[40vh] lg:h-[30vh] max-h-[200px] w-full space-y-10 lg:space-y-0">
       <svg
        className="flex justify-center items-center w-[60%] lg:w-[20%] h-[50%] lg:h-full rotateSvg3"
         viewBox="0 0 38 44"

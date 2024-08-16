@@ -3,25 +3,26 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import handImg from "../assets/hand.png"
+import handImg from "../assets/hand.png";
+import { ChevronUp } from "lucide-react";
 gsap.registerPlugin(useGSAP);
 export default function Hero() {
   useGSAP(() => {
     const tl = gsap.timeline({ delay: 1 });
     tl.from(".hand", {
-      y:300,
+      y: 300,
       opacity: 0,
       duration: 1,
       ease: "expo",
     });
     tl.to(".circlel", {
-      x:-100,
+      x: -100,
       opacity: 1,
       duration: 0.5,
       ease: "expo.inOut",
     });
     tl.to(".circler", {
-      x:-100,
+      x: -100,
       opacity: 1,
       duration: 0.5,
       ease: "expo.inOut",
@@ -52,10 +53,9 @@ export default function Hero() {
     tl.to(".animateHighlights", {
       duration: 1,
       ease: "power3.in",
-      "textDecorationLine": "underline",
-      "textDecorationColor": "rgb(99 102 241)",
-      "textDecorationSkipInk": "auto",
-
+      textDecorationLine: "underline",
+      textDecorationColor: "rgb(99 102 241)",
+      textDecorationSkipInk: "auto",
     });
     tl.to(".animate1", {
       opacity: 1,
@@ -90,9 +90,14 @@ export default function Hero() {
         <Button>Getting Started</Button>{" "}
         <Button variant={"outline"}>Learn more</Button>
       </div>
-      <div className="hidden lg:block absolute -bottom-[20%] -left-[20%] bg-gradient-to-r from-indigo-400/80 to-transparent p-[30vh] lg:p-[55vh] rounded-full z-0 opacity-0 circlel"/>
-      <div className="hidden lg:block absolute -bottom-[20%] -right-[30%] bg-gradient-to-r from-transparent to-indigo-400/80 p-[30vh] lg:p-[55vh] rounded-full z-0 opacity-0 circler"/>
-      <img src={handImg} alt="glowblock" className="absolute w-full lg:w-[50%] bottom-0 lg:-bottom-[20vh] block z-0 hand opacity-50"/>
+      <div className="hidden lg:block absolute -bottom-[20%] -left-[20%] bg-gradient-to-r from-indigo-400/80 to-transparent p-[30vh] lg:p-[55vh] rounded-full z-0 opacity-0 circlel" />
+      <div className="hidden lg:block absolute -bottom-[20%] -right-[30%] bg-gradient-to-r from-transparent to-indigo-400/80 p-[30vh] lg:p-[55vh] rounded-full z-0 opacity-0 circler" />
+      <img
+        src={handImg}
+        alt="glowblock"
+        className="absolute w-full lg:w-[50%] bottom-0 lg:-bottom-[20vh] block z-0 hand opacity-50"
+      />
+      <ChevronUp className="absolute bottom-5 w-10 h-10 text-indigo-400 animate-bounce" />
     </Container>
   );
 }
