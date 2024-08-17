@@ -10,25 +10,26 @@ export default function AppFeatures() {
   const scrollArea = useRef<HTMLDivElement>(null);
   useGSAP(() => {
     const tl = gsap.timeline({
-      delay: 1,
+      delay: 0.5,
       scrollTrigger: {
         trigger: ".containerMain",
         start: "top 80%",
         end: "top -10%",
         scrub: 2,
-        // markers: true,
       },
     });
     tl.from(box1.current, {
-      x: -300,
-      duration: 1,
-      ease: "expo.inOut",
-    },"xyz");
+      opacity: 0,
+      x: -500,
+      duration: 2,
+      ease: "expo",
+    },"boxAnimation");
     tl.from(box2.current, {
-      x: 300,
-      duration: 1,
-      ease: "expo.inOut",
-    },"xyz");
+      opacity: 0,
+      x: 500,
+      duration: 2,
+      ease: "expo",
+    },"boxAnimation");
   });
   return (
     <Container
@@ -41,7 +42,7 @@ export default function AppFeatures() {
       >
         <div
           ref={box1}
-          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2 shadow-md hover:shadow-foreground/60 transition duration-300"
+          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2 "
         >
           <span className="text-5xl lg:text-4xl font-extrabold p-2 kanit-regular head1">
             File Sharing
@@ -78,7 +79,7 @@ export default function AppFeatures() {
         </div>
         <div
           ref={box2}
-          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2 box2 shadow-md hover:shadow-foreground/60 transition duration-300"
+          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2"
         >
           <span className="text-5xl lg:text-4xl font-extrabold p-2 kanit-regular head2">
             Collect Files
