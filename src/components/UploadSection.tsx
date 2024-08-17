@@ -14,6 +14,11 @@ export default function UploadSection() {
         scrub: 2,
       },
     });
+    tl.to(".featureContainer", {
+      background: "linear-gradient(to right, #2d2a4a, #1b1f3a)",
+      duration: 1,
+      ease: "power4.inOut",
+    });
     tl.fromTo(
       ".flowHeading",
       {
@@ -58,16 +63,18 @@ export default function UploadSection() {
     );
   });
   return (
-    <div className="w-full flex flex-col justify-center lg:items-center lg:space-x-3 space-y-1 uploadSection h-screen">
-      <UploadCloud className="w-[80px] h-[80px] lg:h-[200px] lg:w-[200px] text-indigo-400 uploadIcon" />
-      <span className="text-3xl kanit-regular font-bold uploadHeading">
-        Upload
-      </span>
-      <span className="hidden lg:block">-</span>
-      <span className="uploadDesc">
-        Your data will be accessible on the IPFS network where it is
-        perpetually.
-      </span>
+    <div className="w-full flex uploadSection h-screen justify-center items-center">
+      <div className="flex flex-col justify-center items-center lg:space-x-3 space-y-1 h-[80%] w-[80%] max-w-[800px] max-h-[500px]">
+        <UploadCloud className="w-[80px] h-[80px] lg:h-[200px] lg:w-[200px] uploadIcon" />
+        <span className="text-3xl kanit-regular font-bold uploadHeading">
+          Upload
+        </span>
+        <span className="hidden lg:block">-</span>
+        <span className="uploadDesc">
+          Your data will be accessible on the IPFS network where it is
+          perpetually.
+        </span>
+      </div>
     </div>
   );
 }

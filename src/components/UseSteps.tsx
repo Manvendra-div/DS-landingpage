@@ -6,7 +6,7 @@ import DistributeSection from "./DistributeSection";
 export default function UseSteps() {
   return (
     <Container
-      pclassName="relative min-h-screen overflow-hidden"
+      pclassName="relative min-h-screen overflow-hidden featureContainer"
       className="flex justify-center items-center"
     >
       <span className="fixed bottom-10 text-2xl lg:text-6xl font-extrabold flowHeading kanit-regular z-10">

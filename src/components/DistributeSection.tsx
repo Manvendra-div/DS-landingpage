@@ -14,6 +14,11 @@ export default function DistributeSection() {
         scrub: 2,
       },
     });
+    tl.to(".featureContainer", {
+      background: "linear-gradient(to right, #3a3a3a, #2f4f4f)",
+      duration: 1,
+      ease: "power4.inOut",
+    })
     tl.from(
       ".distributeIcon",
       {
@@ -49,16 +54,12 @@ export default function DistributeSection() {
       top: `50%`,
       duration: 1,
       ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".distributeSection",
-        start: "top 0%",
-        end: "top -10%",
-        scrub: 1.5
-  }});
+    });
   });
   return (
-    <div className="w-full flex flex-col justify-center lg:items-center lg:space-x-3 space-y-1 distributeSection h-screen">
-      <Globe2 className="w-[80px] h-[80px] lg:h-[200px] lg:w-[200px] text-indigo-400 distributeIcon" />
+    <div className="w-full flex distributeSection h-screen justify-center items-center">
+      <div className="flex flex-col justify-center items-center lg:space-x-3 space-y-1 h-[80%] w-[80%] max-w-[800px] max-h-[500px]">
+      <Globe2 className="w-[80px] h-[80px] lg:h-[200px] lg:w-[200px] distributeIcon" />
       <span className="text-3xl kanit-regular font-bold distributeHeading">
         Distribute
       </span>
@@ -67,6 +68,7 @@ export default function DistributeSection() {
         Your data will be accessible on the IPFS network where it is
         perpetually.
       </span>
+      </div>
     </div>
   );
 }

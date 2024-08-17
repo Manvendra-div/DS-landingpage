@@ -8,6 +8,7 @@ import Features from "./components/Features";
 import gsap from "gsap";
 import UseSteps from "./components/UseSteps";
 import { fknpme } from "./lib/utils";
+import AppFeatures from "./components/AppFeatures";
 function App() {
   const lenisRef = useRef<any>();
   useEffect(() => {
@@ -15,7 +16,6 @@ function App() {
       lenisRef.current?.lenis?.raf(time * 1000);
     }
     gsap.ticker.add(update);
-
     return () => {
       gsap.ticker.remove(update);
     };
@@ -31,7 +31,7 @@ function App() {
           <Hero />
           <Features />
           <UseSteps />
-          <div className="h-[100vh]"></div>
+          <AppFeatures/>
         </div>
       </ThemeProvider>
     </ReactLenis>
