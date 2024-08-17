@@ -58,7 +58,7 @@ export default function AppFeatures() {
       >
         <div
           ref={box1}
-          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2 "
+          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2 overflow-hidden"
         >
           <span className="text-5xl lg:text-4xl font-extrabold p-2 kanit-regular head1">
             File Sharing
@@ -96,7 +96,7 @@ export default function AppFeatures() {
         </div>
         <div
           ref={box2}
-          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2"
+          className="w-full lg:w-[45%] h-[60vh] lg:h-full rounded-xl border-[1px] border-foreground/30 flex flex-col justify-between items-center px-2 pt-2 overflow-hidden"
         >
           <span className="text-5xl lg:text-4xl font-extrabold p-2 kanit-regular head2">
             Collect Files
