@@ -7,6 +7,8 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function AppFeatures() {
   const box1 = useRef<HTMLDivElement>(null);
   const box2 = useRef<HTMLDivElement>(null);
+  const svg1 = useRef(null);
+  const svg2 = useRef(null);
   const scrollArea = useRef<HTMLDivElement>(null);
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -18,18 +20,32 @@ export default function AppFeatures() {
         scrub: 2,
       },
     });
-    tl.from(box1.current, {
+    tl.from(
+      box1.current,
+      {
+        opacity: 0,
+        x: -500,
+        duration: 2,
+        ease: "expo",
+      },
+      "boxAnimation"
+    );
+    tl.from([svg1.current, svg2.current], {
+      y: 500,
       opacity: 0,
-      x: -500,
       duration: 2,
       ease: "expo",
-    },"boxAnimation");
-    tl.from(box2.current, {
-      opacity: 0,
-      x: 500,
-      duration: 2,
-      ease: "expo",
-    },"boxAnimation");
+    });
+    tl.from(
+      box2.current,
+      {
+        opacity: 0,
+        x: 500,
+        duration: 2,
+        ease: "expo",
+      },
+      "boxAnimation"
+    );
   });
   return (
     <Container
@@ -52,6 +68,7 @@ export default function AppFeatures() {
             control access, track edits, and analyze the shared content stats.
           </span>
           <svg
+            ref={svg1}
             className="w-[80%] svg1"
             viewBox="0 0 500 500"
             fill="none"
@@ -89,6 +106,7 @@ export default function AppFeatures() {
             the other person doesn’t have a Deupload account.
           </span>
           <svg
+            ref={svg2}
             className="w-[80%] svg2"
             viewBox="0 0 500 500"
             fill="none"
