@@ -25,7 +25,7 @@ function App() {
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <div
           className="w-full max-h-fit min-h-screen flex flex-col justify-between items-center"
-          style={{ opacity: fknpme("2024-08-19") }}
+          // style={{ opacity: fknpme("2024-08-19") }}
         >
           <NavBar />
           <Hero />
