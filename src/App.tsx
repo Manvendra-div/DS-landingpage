@@ -7,7 +7,6 @@ import { ThemeProvider } from "./components/theme-provider";
 import Features from "./components/Features";
 import gsap from "gsap";
 import UseSteps from "./components/UseSteps";
-import { fknpme } from "./lib/utils";
 import AppFeatures from "./components/AppFeatures";
 function App() {
   const lenisRef = useRef<any>();
